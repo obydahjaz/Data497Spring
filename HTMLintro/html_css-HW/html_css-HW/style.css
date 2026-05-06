@@ -1,0 +1,54 @@
+body {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  padding: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0.25em 0;
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0.25em 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin: 0.25em 0;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1em;
+  color: black;
+  /* Starting my review section/code here */
+}
+#header{
+  font-family: "Montserrat", sans-serif;
+  color: navy
+}
+#personal-review{
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: darkslateblue
+}
+#image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  border: 4px dotted navy;
+}
+#website{
+  font-family: "Montserrat", sans-serif;
+  color: darkslateblue;
+  font-size: medium;
+}
+#source{
+  font-family: "Montserrat", sans-serif;
+  color: darkslateblue;
+  font-size: small;
+  text-align: center;
+}
