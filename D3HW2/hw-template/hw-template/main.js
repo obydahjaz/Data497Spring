@@ -1,6 +1,6 @@
 //TODO
 //Declare consts/global variables
-        const margin = 30;
+        const margin = 50;
         const width = 500; 
         const height = 500;
 
@@ -33,9 +33,13 @@
             .attr("height", height);
     //Axes - create axes
         const bottomAxis = d3.axisBottom()
-                                .scale(xScale);
+                                .scale(xScale)
+                                .ticks(7)                   
+                                .tickFormat(d3.format("d"));
         const leftAxis = d3.axisLeft()
                                 .scale(yScale); 
+                            
+
     //Lines
     const line = d3.line()
                     .x(d => xScale(d.year))
@@ -58,5 +62,30 @@
         svg.append("g")
             .attr("transform", "translate(" + margin + ",0)")
             .call(leftAxis);
+    //Adding text
+        svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", margin / 2)
+        .attr("text-anchor", "middle")
+        .attr("class", "chart-title")
+        .text("Average Hourly Wage by Sex");
+
+   //X-Axis label
+        svg.append("text")
+            .attr("x", width / 2)
+            .attr("y", height - 10)
+            .attr("text-anchor", "middle")
+            .attr("class", "axis-label")
+            .text("Year");
+
+  // Y-axis label
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", 15)
+            .attr("text-anchor", "middle")
+            .attr("class", "axis-label")
+            .text("Average Hourly Wage");
+
 
     });
